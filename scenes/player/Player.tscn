@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://dqc0slt7c1imq"]
+
+[ext_resource type="Script" path="res://scenes/player/Player.gd" id="1_il5xt"]
+[ext_resource type="PackedScene" uid="uid://dy6imdwdwvgfu" path="res://resources/man.glb" id="1_ktu0e"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_i3pg3"]
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_il5xt")
+
+[node name="man" parent="." instance=ExtResource("1_ktu0e")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(4.03535, 0, 0, 0, 3.30782, 0, 0, 0, 4.75591, 0, 0, 0)
+shape = SubResource("BoxShape3D_i3pg3")

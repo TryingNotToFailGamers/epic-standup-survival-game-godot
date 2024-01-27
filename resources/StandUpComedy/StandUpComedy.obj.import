@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dg225g4al11xs"
+path="res://.godot/imported/StandUpComedy.obj-921f38b74b8bf3f9d3efb8cdb192ccdc.mesh"
+
+[deps]
+
+files=["res://.godot/imported/StandUpComedy.obj-921f38b74b8bf3f9d3efb8cdb192ccdc.mesh"]
+
+source_file="res://resources/StandUpComedy/StandUpComedy.obj"
+dest_files=["res://.godot/imported/StandUpComedy.obj-921f38b74b8bf3f9d3efb8cdb192ccdc.mesh", "res://.godot/imported/StandUpComedy.obj-921f38b74b8bf3f9d3efb8cdb192ccdc.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

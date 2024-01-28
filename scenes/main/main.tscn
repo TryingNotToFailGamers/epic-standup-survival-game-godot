@@ -16,6 +16,4 @@ fov = 50.8
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -172, -38.585, 50)
 
 [node name="Player" parent="." instance=ExtResource("2_draik")]
-transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 0, 25.2854, 0)
-top_level = true
-up_direction = Vector3(0.499962, 0.499962, 0.70716)
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, -0.757874, 10.0771, -29.1326)

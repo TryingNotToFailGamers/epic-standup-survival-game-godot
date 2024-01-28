@@ -23,7 +23,8 @@ func _process(delta):
 	var target_velocity = direction * MAX_SPEED 
 	
 	velocity = velocity.lerp(target_velocity, 1 - exp(-delta * ACCELERATION_SMOOTHING))
-	velocity.y -= GRAVITY
+	if is_on_floor() == true:
+		velocity.y -= GRAVITY
 	jump()
 	move_and_slide()
 	

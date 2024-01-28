@@ -60,9 +60,9 @@ albedo_texture = ExtResource("5_i2q6w")
 [sub_resource type="BoxShape3D" id="BoxShape3D_04ggf"]
 size = Vector3(3.63649, 1.01838, 1.39795)
 
-[node name="stage" type="Node3D"]
+[node name="stage" type="Node3D" groups=["stage"]]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." groups=["stage"]]
 mesh = ExtResource("1_tp5we")
 surface_material_override/0 = SubResource("StandardMaterial3D_b1c8b")
 surface_material_override/1 = SubResource("StandardMaterial3D_em4u2")
@@ -82,8 +82,8 @@ surface_material_override/14 = SubResource("StandardMaterial3D_1qigj")
 surface_material_override/15 = SubResource("StandardMaterial3D_kci1w")
 surface_material_override/16 = SubResource("StandardMaterial3D_7coev")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
+[node name="StaticBody3D" type="StaticBody3D" parent="." groups=["stage"]]
 transform = Transform3D(-40.1357, 0, 0, 0, 12.1484, 0, 0, 0, 258.128, -81.692, 19.9766, -183.182)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" groups=["stage"]]
 shape = SubResource("BoxShape3D_04ggf")

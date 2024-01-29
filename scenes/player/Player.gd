@@ -1,10 +1,10 @@
 extends CharacterBody3D
 
-const MAX_SPEED = 280	
-const ACCELERATION_SMOOTHING_FOR_MOVEMENT = 10
+const MAX_SPEED = 400	
+const ACCELERATION_SMOOTHING_FOR_MOVEMENT = 13
 const ACCELERATION_SMOOTHING_FOR_DASH = 30
-const  GRAVITY = 40
-const  JUMP_POWER = 900
+const  GRAVITY = 80
+const  JUMP_POWER = 1200
 const DASH_POWER = 15000
 
 @onready var collition_shape = $CollisionShape3D
@@ -51,15 +51,18 @@ func dash(delta):
 	var dash_direction
 	if Input.is_action_just_pressed("dash") and velocity.y == 0:
 		if Input.is_action_pressed("move_right"):
-			dash_direction = Vector3.LEFT
+			dash_left(delta, Vector3.LEFT)
 	
 		elif Input.is_action_pressed("move_left"):
-			dash_direction = Vector3.RIGHT
-		
-		velocity = velocity.lerp(dash_direction * JUMP_POWER, - exp(-delta * ACCELERATION_SMOOTHING_FOR_DASH))
-		print("just dashed")
-		print(velocity)
-		
+			dash_left(delta, Vector3.RIGHT)
 
 
-	
+func dash_left(delta, dash_direction: Vector3):
+	velocity = velocity.lerp(dash_direction * JUMP_POWER, - exp(-delta * ACCELERATION_SMOOTHING_FOR_DASH))
+	print("just dashed")
+	print(velocity)
+
+func dash_right(delta, dash_direction: Vector3):
+	velocity = velocity.lerp(dash_direction * JUMP_POWER, - exp(-delta * ACCELERATION_SMOOTHING_FOR_DASH))
+	print("just dashed")
+	print(velocity)

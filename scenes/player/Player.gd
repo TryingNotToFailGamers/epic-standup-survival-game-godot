@@ -51,18 +51,13 @@ func dash(delta):
 	var dash_direction
 	if Input.is_action_just_pressed("dash") and velocity.y == 0:
 		if Input.is_action_pressed("move_right"):
-			dash_left(delta, Vector3.LEFT)
+			dash_direction(delta, Vector3.LEFT)
 	
 		elif Input.is_action_pressed("move_left"):
-			dash_left(delta, Vector3.RIGHT)
+			dash_direction(delta, Vector3.RIGHT)
 
 
-func dash_left(delta, dash_direction: Vector3):
-	velocity = velocity.lerp(dash_direction * JUMP_POWER, - exp(-delta * ACCELERATION_SMOOTHING_FOR_DASH))
-	print("just dashed")
-	print(velocity)
-
-func dash_right(delta, dash_direction: Vector3):
+func dash_direction(delta, dash_direction: Vector3):
 	velocity = velocity.lerp(dash_direction * JUMP_POWER, - exp(-delta * ACCELERATION_SMOOTHING_FOR_DASH))
 	print("just dashed")
 	print(velocity)

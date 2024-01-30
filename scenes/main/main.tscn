@@ -1,9 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://bva4r3er43wfs"]
+[gd_scene load_steps=4 format=3 uid="uid://bva4r3er43wfs"]
 
 [ext_resource type="PackedScene" uid="uid://b5r6n5kqbqk5q" path="res://scenes/stage/stage.tscn" id="1_b6dws"]
+[ext_resource type="PackedScene" uid="uid://bssomycw5jcfu" path="res://scenes/ultimate_bar/ultimate_bar.tscn" id="1_oh215"]
 [ext_resource type="PackedScene" uid="uid://dqc0slt7c1imq" path="res://scenes/player/Player.tscn" id="2_draik"]
 
 [node name="Main" type="Node"]
+
+[node name="UltimateBar" parent="." instance=ExtResource("1_oh215")]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 56.5039, 78.9919)
